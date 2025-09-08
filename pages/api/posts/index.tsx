@@ -1,4 +1,5 @@
 // pages/api/posts/index.ts
+// pages/api/posts/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { posts, Post } from "../../../data/posts";
 
@@ -17,15 +18,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (exists) return res.status(409).json({ error: "Post id already exists" });
 
     const newPost: Post = {
-      id: body.id,
-      title: body.title,
-      excerpt: body.excerpt ?? "",
-      body: body.body,
-      coverImage: body.coverImage,
-      createdAt: new Date().toISOString(),
-    };
+     id: body.id,
+     title: body.title,
+     excerpt: body.excerpt ?? "",
+     body: body.body,
+     coverImage: body.coverImage ?? "https://via.placeholder.com/600x400", // ✅ fallback
+     createdAt: new Date().toISOString(),
+};
+
     posts.unshift(newPost);
     return res.status(201).json(newPost);
   }
   return res.status(405).json({ error: "Method not allowed" });
 }
+
+
