@@ -13,7 +13,8 @@ export const posts: Post[] = [
     title: "First Post",
     excerpt: "This is the first post excerpt.",
     body: "This is the full content of the first post.",
-    coverImage: "https://images.unsplash.com/photo-1522199710521-72d69614c702",
+    coverImage:
+      "https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     createdAt: new Date().toISOString(),
   },
   {
@@ -21,7 +22,8 @@ export const posts: Post[] = [
     title: "Second Post",
     excerpt: "This is the second post excerpt.",
     body: "This is the full content of the second post.",
-    coverImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    coverImage:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     createdAt: new Date().toISOString(),
   },
   {
@@ -29,7 +31,8 @@ export const posts: Post[] = [
     title: "Third Post",
     excerpt: "Another interesting excerpt.",
     body: "This is the full content of the third post.",
-    coverImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    coverImage:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     createdAt: new Date().toISOString(),
   },
 ];
