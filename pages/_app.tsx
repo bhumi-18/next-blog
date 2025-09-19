@@ -7,16 +7,11 @@ import { SessionProvider } from "next-auth/react";
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
-      {/* Navbar appears on every page */}
-      <Navbar />
-
-      {/* Main page content */}
+      <Navbar />   {/* 👈 Navbar added globally */}
       <main className="min-h-screen">
         <Component {...pageProps} />
       </main>
-
-      {/* Footer appears on every page */}
-      <Footer />
+      <Footer />   {/* 👈 Footer at bottom */}
     </SessionProvider>
   );
 }
